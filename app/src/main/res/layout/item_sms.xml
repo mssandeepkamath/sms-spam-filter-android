@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:layout_marginVertical="10dp"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/statusView"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerVertical="true"
+        android:padding="10dp"
+        android:layout_margin="2dp"
+        android:src="@drawable/unknown"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="vertical"
+        android:weightSum="2"
+        android:layout_toRightOf="@id/statusView"
+        >
+
+        <TextView
+            android:id="@+id/addressTextView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textAlignment="viewStart"
+            android:textStyle="normal"
+            android:lines="1"
+            android:layout_weight="0.6"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/messageTextView"
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:textAlignment="viewStart"
+            android:textStyle="normal"
+            android:lines="3"
+            android:textColor="#6F6F6F"
+            android:layout_weight="1.4"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+    android:layout_margin="1dp"
+    android:orientation="vertical"
+tools:context=".activity.MainActivity">
+
+    <TextView
+        android:id="@+id/hider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SMS Spam Filter"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:fontFamily="cursive"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:layout_margin="10dp"
+        />
+
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/recyclerView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />
+
+</LinearLayout>
