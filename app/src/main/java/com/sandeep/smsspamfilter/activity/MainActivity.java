@@ -3,6 +3,7 @@ package com.sandeep.smsspamfilter.activity;
 import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.media.Image;
 import android.os.Bundle;
@@ -44,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView hider;
 
+    private ImageView dataset;
+
 
     private static final String FLASK_SERVER_URL = "http://192.168.0.180:5000/predict";
 
@@ -70,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        });
 
+        dataset = findViewById(R.id.dataset);
 
         smsAdapter = new SMSAdapter(smsList);
         recyclerView.setAdapter(smsAdapter);
@@ -87,6 +91,14 @@ public class MainActivity extends AppCompatActivity {
                 Message sms = smsList.get(position);
                 loadGif(MainActivity.this,imageView);
                 sendApiRequest(sms,position);
+            }
+        });
+
+        dataset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent  = new Intent(MainActivity.this,DatasetActvitiy.class);
+                startActivity(intent);
             }
         });
     }
