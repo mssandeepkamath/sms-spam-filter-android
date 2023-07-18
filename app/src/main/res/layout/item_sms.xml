@@ -34,7 +34,7 @@
             android:textAlignment="viewStart"
             android:textStyle="normal"
             android:lines="1"
-            android:layout_weight="0.6"
+            android:layout_weight="0.55"
             android:textColor="@color/black"
             android:textSize="15sp" />
 
@@ -46,8 +46,7 @@
             android:textStyle="normal"
             android:lines="3"
             android:textColor="#6F6F6F"
-            android:layout_weight="1.4"
-            android:padding="2dp"
+            android:layout_weight="1.45"
             android:textSize="12sp" />
 
     </LinearLayout>
